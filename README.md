@@ -1,2 +1,2 @@
 # AngularJS-final-project
-# AngularJS-final-project
+# Author: ThinhLe
