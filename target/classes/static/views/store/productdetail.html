@@ -1,0 +1,33 @@
+<div class="container" ng-controller="productList">
+	<h1 align="center">
+		Angular JS Application <br>
+	</h1>
+	<h2>Product Detail</h2>
+	<table ng-controller=productList class="table table-striped" ng-repeat="p in products | filter : {id: ProductId}">
+		<col width="200">
+		<tr style="font-weight: bold; height: 50px">
+			<td>Name:</td>
+			<td>{{p.name}}</td>
+		</tr>
+		<tr style="font-weight: bold; height: 50px"">
+			<td>Model:</td>
+			<td>{{p.model}}</td>
+		</tr>
+		<tr style="font-weight: bold; height: 50px"">
+			<td>Year:</td>
+			<td>{{p.year}}</td>
+		</tr>
+		<tr style="font-weight: bold; height: 50px"">
+			<td>Price:</td>
+			<td>{{p.price | currency}}</td>
+		</tr>
+		<tr style="font-weight: bold; height: 50px"">
+			<td>Producer:</td>
+			<td>{{p.producer}}</td>
+		</tr>
+		<tr style="font-weight: bold; height: 50px"">
+			<td>Available</td>
+			<td>{{p.available}}</td>
+		</tr>
+	</table>
+	<a href="#/mainproduct"><button class="btn btn-primary" style="float: right;">Back to Main Store</button></a>

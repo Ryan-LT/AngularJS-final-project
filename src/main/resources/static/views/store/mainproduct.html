@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="form-inline">
+		<label>Search: </label> <input class="form-control" type="text"
+			ng-model="text_filter" placeholder="Filter Words" value="" />
+	</div>
+	<product-infor></product-infor>
+	<div>
+		<h2>Add new product</h2>
+		<form class="form-horizontal css-form" name="myForm" ng-submit="AddProduct()">
+			<label>Name:</label>
+			<input type="text" class="form-control" ng-model="name" required />
+			<label>Model:</label>
+			<input type="text" class="form-control" ng-model="model" required />
+			<label>Year:</label>
+			<input type="number" pattern="^(19|20)\d{2}$" class="form-control" ng-model="year" required />
+			<label>Price:</label>
+			<input type="number" class="form-control" ng-model="price" required />
+			<label>Producer:</label>
+			<input type="text" class="form-control" ng-model="producer" required />
+			<label>Available:</label>
+			<input name="available" type="number" class="form-control" ng-model="available" required /><br>
+			<button type="submit" ng-click="addProduct()" ng-disabled="myForm.$invalid" class="btn btn-primary">Add</button>
+		</form>
+	</div>
+</div>

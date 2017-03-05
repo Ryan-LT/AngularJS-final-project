@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spring boot and Angularjs Tutorial</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div>
+    <ul>
+        <li><a href="#/users" >Users</a></li>
+        <li><a href="#/roles">Roles</a></li>
+        <li><a href="#/main">Github</a></li>
+        <li style="float:left"><a class="active" href="#/mainproduct">Product List</a></li>
+    </ul>
+</div>
+<div ng-view></div>
+
+<script src="/fresherangular/js/lib/angular-1.4.9/angular.js"></script>
+<script src="/fresherangular/js/lib/angular-1.4.9/angular-resource.js"></script>
+<script src="/fresherangular/js/lib/angular-1.4.9/angular-route.js"></script>
+
+<script src="/fresherangular/js/app.js"></script>
+
+<script src="/fresherangular/js/service/githubService.js"></script>
+<script src="/fresherangular/js/service/productService.js"></script>
+
+<script src="/fresherangular/js/controller/controller.js"></script>
+<script src="/fresherangular/js/controller/MainController.js"></script>
+<script src="/fresherangular/js/controller/RepoController.js"></script>
+<script src="/fresherangular/js/controller/UserController.js"></script>
+<script src="/fresherangular/js/controller/store/productController.js"></script>
+
+<link rel="stylesheet" href="/fresherangular/css/bootstrap.css">
+<link rel="stylesheet" href="/fresherangular/css/bootstrap.min.css">
+<link rel="stylesheet" href="/fresherangular/css/app.css">
+</body>
+</html>

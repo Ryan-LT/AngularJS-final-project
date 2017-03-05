@@ -1,0 +1,38 @@
+<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Model</th>
+				<th>Year</th>
+				<th>Price</th>
+				<th>Producer</th>
+				<th>Available</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="p in products | filter : text_filter">
+				<td><a href="#Productdetail/{{p.id}}">{{p.name}}</a></td>
+				<td>{{p.model}}</td>
+				<td>{{p.year}}</td>
+				<td>{{p.price | currency}}</td>
+				<td>{{p.producer}}</td>
+				<td>
+					<button ng-click="addAvailable(p.id)" class="btn btn-success">
+						<span style="color: white" class="glyphicon glyphicon-plus"></span>
+					</button>
+					<button ng-disabled="p.available==0"
+						ng-click="minusAvailable(p.id)" class="btn btn-warning">
+						<span style="color: white" class="glyphicon glyphicon-minus"></span>
+					</button>&nbsp&nbsp{{p.available | number : fractionSize}}
+				</td>
+				<td>
+					<button ng-click="deleteProduct(p.id)" type="button"
+						class="btn btn-danger">
+						<span style="color: white"
+							class="glyphicon glyphicon-glyphicon glyphicon-trash"></span>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
